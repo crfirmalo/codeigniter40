@@ -10,11 +10,11 @@ class News_model extends CI_Model {
 		{
 				if ($slug === FALSE)
 				{
-						$query = $this->db->get('news');
+						$query = $this->db->get('firmalo_cassandra_news');
 						return $query->result_array();
 				}
 
-				$query = $this->db->get_where('news', array('slug' => $slug));
+				$query = $this->db->get_where('firmalo_cassandra_news', array('slug' => $slug));
 				return $query->row_array();
 		}
 }
